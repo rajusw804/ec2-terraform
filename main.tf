@@ -11,7 +11,7 @@ module "ec2_instance" {
 
   ami                    = "ami-053b0d53c279acc90"
   instance_type          = "t2.micro"
-  key_name               = "test"
+  key_name               = "10am"
   monitoring             = true
   
   tags = {
