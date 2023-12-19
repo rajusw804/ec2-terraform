@@ -8,9 +8,9 @@ module "ec2_instance" {
 
   name = "single-instance"
 
-  ami                    = "ami-0261755bbcb8c4a84"
+  ami                    = "ami-0fc5d935ebf8bc3bc"
   instance_type          = "t2.micro"
-  key_name               = "test345"
+  key_name               = "10am"
   monitoring             = true
   
   tags = {
@@ -21,7 +21,7 @@ module "ec2_instance" {
 }
 terraform {
   backend "s3" {
-    bucket         = "mykrybucket" # Replace with your S3 bucket name
+    bucket         = "cloudgain" # Replace with your S3 bucket name
     key            = "terraform.tfstate" # Key is the name of the state file in the bucket
     region         = "us-east-1" # Replace with your desired AWS region
     encrypt        = true
