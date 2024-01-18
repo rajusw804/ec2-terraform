@@ -10,6 +10,12 @@ sudo mv terraform /usr/local/bin/
 
 terraform -v
 
+apt update -y
+
+apt install awscli
+
+aws configure
+
 # jenkins-terraform
 
 jenkins-terraform
