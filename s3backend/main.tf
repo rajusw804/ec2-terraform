@@ -1,5 +1,5 @@
 provider "aws" {
-  region     = "ap-south-1"
+  region     = "us-east-1"
 }
 
 module "ec2_instance" {
@@ -8,9 +8,9 @@ module "ec2_instance" {
 
   name = "single-instance"
 
-  ami                    = "ami-0fc5d935ebf8bc3bc"
+  ami                    = "ami-01b799c439fd5516a"
   instance_type          = "t2.micro"
-  key_name               = "10am"
+  key_name               = "newbatch"
   monitoring             = true
   
   tags = {
@@ -21,7 +21,7 @@ module "ec2_instance" {
 }
 terraform {
   backend "s3" {
-    bucket         = "cloudgain" # Replace with your S3 bucket name
+    bucket         = "rudram" # Replace with your S3 bucket name
     key            = "terraform.tfstate" # Key is the name of the state file in the bucket
     region         = "us-east-1" # Replace with your desired AWS region
     encrypt        = true
