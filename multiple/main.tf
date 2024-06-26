@@ -9,12 +9,12 @@ module "ec2_instance" {
 
   name = "instance-${each.key}"
 
-  ami                    = "ami-ebd02392"
+  ami                    = "ami-01b799c439fd5516a"
   instance_type          = "t2.micro"
-  key_name               = "10am"
+  key_name               = "newbatch"
   monitoring             = true
-  vpc_security_group_ids = ["sg-12345678"]
-  subnet_id              = "subnet-eddcdzz4"
+  vpc_security_group_ids = ["sg-0f3603543f74d16ab"]
+  subnet_id              = "subnet-082574a5d56740791"
 
   tags = {
     Terraform   = "true"
