@@ -1,5 +1,5 @@
 provider "aws" {
-  region     = "us-east-1"
+  region     = "ap-south-1"
 }
 
 module "ec2_instance" {
@@ -8,9 +8,9 @@ module "ec2_instance" {
 
   name = "single-instance"
 
-  ami                    = "ami-01b799c439fd5516a"
+  ami                    = "ami-04f8d7ed2f1a54b14"
   instance_type          = "t2.micro"
-  key_name               = "newbatch"
+  key_name               = "testdd"
   monitoring             = true
   
   tags = {
