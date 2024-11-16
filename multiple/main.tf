@@ -9,11 +9,11 @@ module "ec2_instance" {
 
   name = "instance-${each.key}"
 
-  ami                    = "ami-0e86e20dae9224db8"
+  ami                    = "ami-012967cc5a8c9f891"
   instance_type          = "t2.micro"
   key_name               = "vpc"
   monitoring             = true
-  vpc_security_group_ids = ["sg-0d19342d4c2942b9b"]
+  vpc_security_group_ids = ["sg-088ecb59a8078e11c"]
   subnet_id              = "subnet-0051dcb35a8f998ca"
 
   tags = {
