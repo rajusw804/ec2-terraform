@@ -5,7 +5,7 @@ provider "aws" {
 resource "aws_s3_bucket" "my_bucket" {
   bucket = "my-unique-avan-name"  # Specify a globally unique bucket name
 
-  acl    = "public-read"  # Access Control List for the bucket, can be adjusted based on your needs
+  acl    = "private"  # Access Control List for the bucket, can be adjusted based on your needs
 
   tags = {
     Name        = "my-unique-avan-name"
