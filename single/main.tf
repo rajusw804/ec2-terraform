@@ -9,9 +9,9 @@ module "ec2_instance" {
 
   name = "single-instance"
 
-  ami                    = "ami-053b0d53c279acc90"
+  ami                    = "ami-071226ecf16aa7d96"
   instance_type          = "t2.micro"
-  key_name               = "10am"
+  key_name               = "tets22"
   monitoring             = true
   
   tags = {
