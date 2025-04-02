@@ -1,12 +1,14 @@
 Terraform installation:
 
-sudo wget [https://releases.hashicorp.com/terraform/0.14.7/terraform_0.14.7_linux_amd64.zip](https://releases.hashicorp.com/terraform/1.9.4/terraform_1.9.4_linux_amd64.zip)
+# wget [https://releases.hashicorp.com/terraform/0.14.7/terraform_0.14.7_linux_amd64.zip](https://releases.hashicorp.com/terraform/1.9.4/terraform_1.9.4_linux_amd64.zip)
+
+wget https://releases.hashicorp.com/terraform/1.11.3/c
 
 apt install unzip
 
-sudo unzip terraform_0.14.7_linux_amd64.zip
+unzip terraform_1.11.3_linux_amd64.zip
 
-sudo mv terraform /usr/local/bin/
+mv terraform /usr/local/bin/
 
 terraform -v
 
