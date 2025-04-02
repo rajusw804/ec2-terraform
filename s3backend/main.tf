@@ -8,9 +8,9 @@ module "ec2_instance" {
 
   name = "single-instance"
 
-  ami                    = "ami-0182f373e66f89c85"
+  ami                    = "ami-071226ecf16aa7d96"
   instance_type          = "t2.micro"
-  key_name               = "vpc"
+  key_name               = "tets22"
   monitoring             = true
   
   tags = {
