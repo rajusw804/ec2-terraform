@@ -1,10 +1,10 @@
 provider "aws" {
-  region = "ap-southeast-2" # Or your desired region
+  region = "us-east-1" # Or your desired region
 }
 
 resource "aws_instance" "example" {
-  ami           = "ami-0a0b0b06dd1636865"
-  key_name = "rajdevops"
+  ami           = "ami-0fa3fe0fa7920f68e"
+  key_name = "rajavan"
   tags = {
     Name = "My-Terraform-EC2-Instance"
   }
@@ -12,9 +12,9 @@ resource "aws_instance" "example" {
 
 terraform {
   backend "s3" {
-    bucket         = "rakesh-terraform-practice" # Replace with your S3 bucket name
+    bucket         = "rakesh-terraform-practice1" # Replace with your S3 bucket name
     key            = "terraform.tfstate" # Key is the name of the state file in the bucket
-    region         = "ap-southeast-2" # Replace with your desired AWS region
+    region         = "us-east-1" # Replace with your desired AWS region
     encrypt        = true
   }
 }
