@@ -4,6 +4,7 @@ provider "aws" {
 
 resource "aws_instance" "example" {
   ami           = "ami-0fa3fe0fa7920f68e"
+  instance_type = "t3.micro"
   key_name = "rajavan"
   tags = {
     Name = "My-Terraform-EC2-Instance"
