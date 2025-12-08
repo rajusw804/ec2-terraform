@@ -1,7 +1,6 @@
 provider "aws" {
-  region = "ap-southeast-2" # Or your desired region
+  region = "us-east-1" # Or your desired region
 }
-
 
 variable "instance_names" {
   description = "A set of unique names for the EC2 instances."
@@ -13,7 +12,7 @@ variable "instance_names" {
 resource "aws_instance" "example" {
   for_each = var.instance_names
 
-  ami           = "ami-0a0b0b06dd1636865"
+  ami           = "ami-0fa3fe0fa7920f68e"
   instance_type = "t3.micro"
 
   tags = {
