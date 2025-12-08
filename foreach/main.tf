@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-southeast-2" # Or your desired region
+  region = "us-east-1" # Or your desired region
 }
 
 variable "ec2_instances" {
@@ -8,11 +8,12 @@ variable "ec2_instances" {
   default = {
     web_server = {
       instance_type = "t3.micro"
-      ami           = "ami-0279a86684f669718"
+      ami           = "i-017bab2fde6e2d976"
+      key_name = "rajavan"
     }
     app_server = {
       instance_type = "t3.micro"
-      ami           = "ami-02010f4ba46655bb2"
+      ami           = "i-017bab2fde6e2d976"
     }
   }
 }
@@ -23,6 +24,7 @@ resource "aws_instance" "example" {
   # The instance attributes are pulled from the map's values
   instance_type = each.value.instance_type
   ami           = each.value.ami
+  key_name = "rajavan"
 
   tags = {
     # The instance name comes from the map's key
