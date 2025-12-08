@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-southeast-2" # Or your desired region
+  region = "us-east-1" # Or your desired region
 }
 
 variable "create_instance" {
@@ -9,8 +9,9 @@ variable "create_instance" {
 
 resource "aws_instance" "example" {
   count         = var.create_instance ? 1 : 0
-  ami           = "ami-0a0b0b06dd1636865"
+  ami           = "ami-0fa3fe0fa7920f68e"
   instance_type = "t3.micro"
+  key_name = "rajavan"
   tags = {
     Name = "My-Conditional-Instance"
   }
