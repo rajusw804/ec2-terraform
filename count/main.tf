@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "ap-southeast-2" # Or your desired region
+  region = "us-east-1" # Or your desired region
 }
 
 
@@ -13,13 +13,9 @@ variable "instance_count" {
 resource "aws_instance" "example" {
 
   count = var.instance_count 
-  ami           = "ami-0a0b0b06dd1636865"
+  ami           = "ami-0fa3fe0fa7920f68e"
   instance_type = "t3.micro"
-  key_name = "rajdevops"
-  
-
-  instance_type = "t3.micro"
-
+  key_name = "rajavan"
 
   tags = {
     Name = "My-EC2-Instance-${count.index}"
