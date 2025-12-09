@@ -1,3 +1,8 @@
+# Provisioner:
+# Local exec  : Runs on the machine where terraform installed
+# file : Sending files from terraform machine other machines
+# remote-exec : Runs the scripts/commands on remote machine
+
 provider "aws" {
   region = "us-east-1" # Or your desired region
 }
