@@ -1,3 +1,5 @@
+# terraform workspace new dev
+# terraform workspace select dev
 # main.tf
 variable "instance_type" {
   type    = string
