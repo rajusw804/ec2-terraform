@@ -8,7 +8,6 @@ module "dev_app_server" {
 
   ami           = "ami-0fa3fe0fa7920f68e"
   instance_type = "t3.micro"
-  key_name = "rajavan"
   server_name   = "dev-web-app"
 }
 
@@ -17,7 +16,6 @@ module "prod_app_server" {
 
   ami           = "ami-0fa3fe0fa7920f68e"
   instance_type = "t3.micro"
-  key_name = "rajavan"
   server_name   = "prod-web-app"
 }
 
