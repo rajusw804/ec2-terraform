@@ -1,8 +1,8 @@
-variable "ami_id" {
+variable "ami" {
   type = string
 }
 
-variable "instance_size" {
+variable "instance_type" {
   type = string
 }
 
