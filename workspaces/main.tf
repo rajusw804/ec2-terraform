@@ -1,5 +1,7 @@
 # terraform workspace new dev
+# terraform workspace list
 # terraform workspace select dev
+# terraform workspace delete dev
 # terraform show
 # main.tf
 variable "instance_type" {
