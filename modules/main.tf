@@ -3,7 +3,8 @@ provider "aws" {
 }
 
 module "dev_app_server" {
-  source = "./modules/app_server"
+  source = "/home/ec2-user/ec2-terraform/modules/app_server"
+
 
   ami           = "ami-0fa3fe0fa7920f68e"
   instance_type = "t3.micro"
@@ -12,7 +13,7 @@ module "dev_app_server" {
 }
 
 module "prod_app_server" {
-  source = "./modules/app_server"
+  source = "/home/ec2-user/ec2-terraform/modules/app_server"
 
   ami           = "ami-0fa3fe0fa7920f68e"
   instance_type = "t3.micro"
