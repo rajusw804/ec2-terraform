@@ -5,7 +5,7 @@ variable "instance_type" {
 }
 
 resource "aws_instance" "app_server" {
-  ami           = "ami-0a0b0b06dd1636865"
+  ami           = "ami-0fa3fe0fa7920f68e"
   instance_type = var.instance_type
   tags = {
     Name = "app-server-${terraform.workspace}"
