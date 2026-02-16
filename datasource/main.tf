@@ -11,3 +11,12 @@ resource "aws_instance" "app_server" {
     Name = "My-App-Server"
   }
 }
+
+output "ami_details" {
+  description = "Details of the AMI found by the data source"
+  value = {
+    id            = data.aws_ami.latest_amazon_linux.id
+    full_name     = data.aws_ami.latest_amazon_linux.name
+    creation_date = data.aws_ami.latest_amazon_linux.creation_date
+  }
+}
