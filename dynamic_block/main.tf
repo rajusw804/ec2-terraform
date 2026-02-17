@@ -1,7 +1,7 @@
 resource "aws_security_group" "web_sg" {
   name        = "web-sg"
   description = "Security group for web servers"
-  vpc_id      = "vpc-0db0cd853b4e65ed0"
+  vpc_id      = "vpc-0db0cd853b4e65ed0 "
 
   # Use a dynamic block to create ingress rules
   dynamic "ingress" {
