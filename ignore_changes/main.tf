@@ -14,7 +14,7 @@ resource "aws_s3_bucket" "my_bucket" {
   lifecycle {
     ignore_changes = [tags]
   }
-} # Removed the extra } that was here
+}
 
 # 2. Set Ownership
 resource "aws_s3_bucket_ownership_controls" "example" {
