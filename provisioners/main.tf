@@ -9,7 +9,7 @@ provider "aws" {
 
 # Creates a new EC2 instance
 resource "aws_instance" "web_server" {
-  ami           = "ami-0ecb62995f68bb549"
+  ami           = "ami-0b6c6ebed2801a5cb"
   instance_type = "t3.micro"
   key_name = "rajavan"
 
