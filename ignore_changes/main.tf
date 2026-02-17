@@ -10,6 +10,12 @@ resource "aws_s3_bucket" "my_bucket" {
     Name        = "Managed by Terraform"
     Environment = "Dev"
   }
+  lifecycle {
+    ignore_changes = [
+      tags,
+    ]
+  }
+}
 }
 
 # 2. Set Ownership (Required before setting ACLs)
