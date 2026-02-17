@@ -2,6 +2,7 @@ provider "aws" {
   region = "us-east-1" # You can change this to your desired AWS region
 }
 
+# 1. The Bucket (Clean)
 resource "aws_s3_bucket" "my_bucket" {
   bucket = "my-unique-bucket-name12423"
 
@@ -9,24 +10,20 @@ resource "aws_s3_bucket" "my_bucket" {
     Name        = "Managed by Terraform"
     Environment = "Dev"
   }
-
-  lifecycle {
-    ignore_changes = [tags]
-  }
 }
 
-# Proper way to handle private access in modern Terraform
+# 2. Set Ownership (Required before setting ACLs)
 resource "aws_s3_bucket_ownership_controls" "example" {
   bucket = aws_s3_bucket.my_bucket.id
   rule {
-    object_ownership = "BucketOwnerEnforced"
+    object_ownership = "BucketOwnerPreferred"
   }
 }
 
-resource "aws_s3_bucket_public_access_block" "example" {
-  bucket                  = aws_s3_bucket.my_bucket.id
-  block_public_acls       = true
-  block_public_policy     = true
-  ignore_public_acls      = true
-  restrict_public_buckets = true
+# 3. The New ACL Resource (Replaces the deprecated line)
+resource "aws_s3_bucket_acl" "example" {
+  depends_on = [aws_s3_bucket_ownership_controls.example]
+
+  bucket = aws_s3_bucket.my_bucket.id
+  acl    = "private"
 }
