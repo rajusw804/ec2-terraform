@@ -8,12 +8,12 @@ variable "ec2_instances" {
   default = {
     web_server = {
       instance_type = "t3.micro"
-      ami           = "i-017bab2fde6e2d976"
+      ami           = "ami-0c1fe732b5494dc14"
       key_name = "rajavan"
     }
     app_server = {
       instance_type = "t3.micro"
-      ami           = "i-017bab2fde6e2d976"
+      ami           = "ami-0b6c6ebed2801a5cb"
     }
   }
 }
